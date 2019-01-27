@@ -4,10 +4,10 @@ zuul:
   routes:
     hello-service:
       path: /server/**
-      serviceId: HELLO-SERVICE
+      serviceId: ATTO-HELLO-SERVICE.BUSINNES.SVC
     hello-client:
       path: /client/**
-      serviceId: HELLO-CLIENT
+      serviceId: ATTO-HELLO-CLIENT.BUSINNES.SVC
 
 eureka:
   client:
