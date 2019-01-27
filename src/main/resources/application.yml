@@ -5,7 +5,6 @@ zuul:
     hello-service:
       path: /server/**
       serviceId: HELLO-SERVICE
-      # url: http://hello-service:5000
     hello-client:
       path: /client/**
       serviceId: HELLO-CLIENT
@@ -13,18 +12,17 @@ zuul:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka-server:8761/eureka/
+      defaultZone: http://atto-eureka-server.common.svc:8080/eureka/
   instance:
-    hostname: eureka-server
-
-server:
-  port: 8079
+    hostname: atto-eureka-server.common.svc
 
 spring:
   application:
-    name: zuul-service
+    name: atto-zuul-server.common.svc
 
-# Increase the Hystrix timeout to 60s (for all)
+server:
+  port: 8080
+
 hystrix:
   command:
     default:
