@@ -1,21 +1,3 @@
-zuul:
-  #Service will be mapped under the /api URI
-  prefix: /api/attosoft-corp
-  routes:
-    hello-service:
-      path: /server/**
-      serviceId: ATTO-HELLO-SERVICE.BUSINNES.SVC
-    hello-client:
-      path: /client/**
-      serviceId: ATTO-HELLO-CLIENT.BUSINNES.SVC
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://atto-eureka-server.common.svc:8080/eureka/
-  instance:
-    hostname: atto-eureka-server.common.svc
-
 spring:
   application:
     name: atto-zuul-server.common.svc
@@ -23,10 +5,15 @@ spring:
 server:
   port: 8080
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api/attosoft-corp
+  routes:
+    hello-service:
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://atto-eureka-server.common.svc:8080/eureka/
+  instance:
+    hostname: atto-eureka-server.common.svc

@@ -1,0 +1,6 @@
+spring:
+  cloud:
+    config:
+      uri: http://atto-config-server.common.svc:8080
+  application:
+    name: atto-zuul-server.common.svc
